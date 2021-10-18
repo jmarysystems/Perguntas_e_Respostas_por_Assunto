@@ -44,6 +44,7 @@ public class Visualizador_Interno_Assunto extends javax.swing.JPanel {
     Class Classe_Das_Imagens = null;
     /**
      * Creates new form Visualizador_Interno2
+     * @param Home2
      * @param tabAssunto_Recebido2
      * @param Classe_Das_Imagens2
      * @param img_Atual2
@@ -52,7 +53,7 @@ public class Visualizador_Interno_Assunto extends javax.swing.JPanel {
      * @param altura2
      */
     
-    public Visualizador_Interno_Assunto( JTabbedPane tabAssunto_Recebido2, Class Classe_Das_Imagens2, int img_Atual2, String endereco_Externo_da_Pasta2, int largura2, int altura2 ) {
+    public Visualizador_Interno_Assunto( Home Home2, JTabbedPane tabAssunto_Recebido2, Class Classe_Das_Imagens2, int img_Atual2, String endereco_Externo_da_Pasta2, int largura2, int altura2 ) {
         initComponents();
                 
         tabAssunto_Recebido = tabAssunto_Recebido2;
@@ -64,6 +65,8 @@ public class Visualizador_Interno_Assunto extends javax.swing.JPanel {
         
         largura = largura2;
         altura = altura2;
+        
+        Home = Home2;
         
         jSlider1.setValue(0);
         setarPastaInicio(img_Atual2);

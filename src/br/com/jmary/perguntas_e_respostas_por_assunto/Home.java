@@ -198,7 +198,7 @@ public class Home extends javax.swing.JPanel {
                 
         /*new Thread() {   @Override public void run() {*/ try { //Thread.sleep( 1 );
                                                           
-            AssuntoX = new Visualizador_Interno_Assunto( tabAssunto, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
+            AssuntoX = new Visualizador_Interno_Assunto( this, tabAssunto, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
                     
             //tabAssunto.removeTabAt( tabAssunto.getSelectedIndex() );
             tabAssunto.add( "0", AssuntoX );
@@ -243,18 +243,15 @@ public class Home extends javax.swing.JPanel {
     } 
                  
     // ABRIR TELA INICIAL DOS EXERCÍCIOS
-    Home HomeAtual = null;
     Visualizador_Interno_Exercicios ExerciciosX;
     private void inicio_Exercicios( String nome_do_pacote_recebido, Class Classe_Das_Imagens_Exercicios ) {                                      
-
-        HomeAtual = this;
         
         /*new Thread() {   @Override public void run() {*/ try { //Thread.sleep( 1 );
             
             int img_Atual = 0;
             Class Classe_Das_Imagens = Classe_Das_Imagens_Exercicios; //Alterar antes a declaração do pacote da classe - Exercicios
             
-            ExerciciosX = new Visualizador_Interno_Exercicios( HomeAtual, tabExercicios, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
+            ExerciciosX = new Visualizador_Interno_Exercicios( this, tabExercicios, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
             
             //tabExercicios.removeTabAt( tabAssunto.getSelectedIndex() );
             tabExercicios.add( "0", ExerciciosX );
@@ -265,15 +262,13 @@ public class Home extends javax.swing.JPanel {
     // ABRIR TELA INICIAL DOS DESAFIOS
     Visualizador_Interno_Desafios DesafiosX;
     private void inicio_Desafios( String nome_do_pacote_recebido, Class Classe_Das_Imagens_Desafios ) {                                      
-
-        HomeAtual = this;
         
         /*new Thread() {   @Override public void run() {*/ try { //Thread.sleep( 1 );
             
             int img_Atual = 0;
             Class Classe_Das_Imagens = Classe_Das_Imagens_Desafios; //Alterar antes a declaração do pacote da classe - Exercicios
             
-            DesafiosX = new Visualizador_Interno_Desafios( HomeAtual, tabDesafios, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
+            DesafiosX = new Visualizador_Interno_Desafios( this, tabDesafios, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
             
             //tabDesafios.removeTabAt( tabDesafios.getSelectedIndex() );
             tabDesafios.add( "0", DesafiosX );
@@ -284,15 +279,13 @@ public class Home extends javax.swing.JPanel {
     // ABRIR TELA INICIAL DOS EXPERT
     Visualizador_Interno_Expert ExpertX;
     private void inicio_Expert( String nome_do_pacote_recebido, Class Classe_Das_Imagens_Expert ) {                                      
-
-        HomeAtual = this;
         
         /*new Thread() {   @Override public void run() {*/ try { //Thread.sleep( 1 );
             
             int img_Atual = 0;
             Class Classe_Das_Imagens = Classe_Das_Imagens_Expert; //Alterar antes a declaração do pacote da classe - Exercicios
             
-            ExpertX = new Visualizador_Interno_Expert( HomeAtual, tabExpert, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
+            ExpertX = new Visualizador_Interno_Expert( this, tabExpert, Classe_Das_Imagens, img_Atual, nome_do_pacote_recebido, 0, 0 );
             
             //tabDesafios.removeTabAt( tabDesafios.getSelectedIndex() );
             tabExpert.add( "0", ExpertX );
